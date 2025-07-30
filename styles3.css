@@ -1,0 +1,123 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.header {
+  grid-area: header;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f0f0f0;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: purple;
+}
+
+.main {
+  grid-area: main;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+}
+
+#darkModeToggle:checked + .dashboard .header .checkmark::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid green;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#darkModeToggle:checked ~ .dashboard {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+#darkModeToggle:checked ~ .dashboard .main {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+#darkModeToggle:checked ~ .dashboard .header,
+#darkModeToggle:checked ~ .dashboard .footer {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+#darkModeToggle:checked ~ .dashboard .sidebar {
+  background-color: #333;
+}
+
+#darkModeToggle:checked ~ .dashboard .sidebar a {
+  color: #aad;
+}
