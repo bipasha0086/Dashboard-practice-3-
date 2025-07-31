@@ -2,9 +2,6 @@
 
 This project showcases a responsive **User Dashboard** with an optional **Dark Mode toggle**, built using HTML and CSS.
 
-## Screenshots
-
-
 
 ##  File Structure
 project-folder/
@@ -30,6 +27,9 @@ project-folder/
   - Flexbox & Grid
   - Transitions
   - Media Queries
+
+## Screenshots
+
 ###  Light Mode
 ![Light Mode](Screenshot%202025-07-30%20115032.png)
 
