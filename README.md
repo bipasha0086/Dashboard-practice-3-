@@ -4,11 +4,6 @@ This project showcases a responsive **User Dashboard** with an optional **Dark M
 
 ## Screenshots
 
-###  Light Mode
-![Light Mode](Screenshot%202025-07-30%20115032.png)
-
-###  Dark Mode
-![Dark Mode](Screenshot%202025-07-30%20115100.png)
 
 
 ##  File Structure
@@ -35,6 +30,13 @@ project-folder/
   - Flexbox & Grid
   - Transitions
   - Media Queries
+###  Light Mode
+![Light Mode](Screenshot%202025-07-30%20115032.png)
+
+###  Dark Mode
+![Dark Mode](Screenshot%202025-07-30%20115100.png)
+
+
 
 
 
